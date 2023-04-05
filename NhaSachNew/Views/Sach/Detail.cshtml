@@ -1,0 +1,66 @@
+﻿@model NhaSachNew.Models.Sach
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            Tên sản phẩm
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            Hình
+        </dt>
+
+        <dd>
+            <img src="@Model.hinh" width="250px" height="300px" />
+        </dd>
+
+        <dt>
+            Giá Bán
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>
+            Ngày Cập Nhật
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số Lượng Tồn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+        </dl>
+</div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.masach }) |
+            @Html.ActionLink("Back to List", "ListSach")
+        </p>
